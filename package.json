@@ -1,13 +1,19 @@
 {
-  "name": "argent-wagmi-connector",
-  "version": "1.0.1",
+  "name": "@nabetse/argent-wagmi-connector",
+  "version": "1.0.0",
   "description": "Argent Wagmi Custom Connector",
   "repository": "https://github.com/nabetse00/argent-wagmi-connector",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "files": [
+    "dist",
+    "src"
+  ],
   "scripts": {
     "test": "vitest",
     "build": "tsc",
-    "coverage": "vitest run --coverage"
+    "coverage": "vitest run --coverage",
+    "prepublish": "npm run build"
   },
   "keywords": [],
   "author": "",
