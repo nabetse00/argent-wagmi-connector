@@ -1,7 +1,8 @@
 {
   "name": "argent-wagmi-connector",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Argent Wagmi Custom Connector",
+  "repository": "https://github.com/nabetse00/argent-wagmi-connector",
   "main": "index.js",
   "scripts": {
     "test": "vitest",
