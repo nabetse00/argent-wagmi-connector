@@ -2,9 +2,14 @@ import { Connector, Chain } from 'wagmi';
 import { getEthereumProvider, IArgentLoginOptions } from '@argent/login';
 import { Web3Provider } from 'zksync-web3';
 
+/**
+ * ArgentWagmiConnector
+ * @extends {Connector<Web3Provider, IArgentLoginOptions>}
+ * @author nabetse
+ */
 export default class ArgentWagmiConnector extends Connector<Web3Provider, IArgentLoginOptions> {
   async connect(_config?: { chainId?: number | undefined } | undefined) {
-    const account = await this.getAccount(); 
+    const account = await this.getAccount();
     const id = await this.getChainId();
     const unsupported = await this.isAuthorized();
     return {
@@ -36,7 +41,6 @@ export default class ArgentWagmiConnector extends Connector<Web3Provider, IArgen
   }
 
   async isAuthorized(): Promise<boolean> {
-    // throw new Error('Method not implemented.')
     return true;
   }
   protected onAccountsChanged(accounts: `0x${string}`[]): void {
@@ -55,6 +59,10 @@ export default class ArgentWagmiConnector extends Connector<Web3Provider, IArgen
 
   #provider?: Web3Provider;
 
+  /**
+   * @param {Chain[]} chains
+   * @param {IArgentLoginOptions} options
+   */
   constructor(config: { chains?: Chain[]; options: IArgentLoginOptions }) {
     super(config);
   }

@@ -2,7 +2,13 @@
 
 ## Usage
 ```ts
+/**
+ * imports 
+ * */
+
 import { arbitrum, avalanche, bsc, fantom, gnosis, mainnet, optimism, polygon, zkSync, zkSyncTestnet, } from 'wagmi/chains'
+import ArgentWagmiConnector  from "@nabetse/argent-wagmi-connector";
+
 
 const chains = [zkSync, zkSyncTestnet];
 
@@ -34,9 +40,9 @@ const wagmiClient = createClient({
   provider
 })
 
-... 
--- MORE CODE --
-...
+/**
+ * More code here
+ * */
 
 return (
     <>
