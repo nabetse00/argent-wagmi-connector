@@ -1,12 +1,24 @@
 {
   "name": "argent-wagmi-connector",
   "version": "1.0.0",
-  "description": "",
+  "description": "Argent Wagmi Custom Connector",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "vitest",
+    "build": "tsc",
+    "coverage": "vitest run --coverage"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@vitest/coverage-c8": "^0.29.2",
+    "typescript": "^4.9.5",
+    "vitest": "^0.29.2"
+  },
+  "dependencies": {
+    "@argent/login": "^0.1.0-alpha.11",
+    "wagmi": "^0.12.1",
+    "zksync-web3": "^0.13.4"
+  }
 }
