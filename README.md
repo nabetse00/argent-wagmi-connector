@@ -70,3 +70,11 @@ return (
   )
 
 ```
+
+## Example 
+
+See an example using vite react-ts template: https://github.com/nabetse00/test-argent-wagmi-connector
+
+Web3Modal needs Metamask so install this extension !
+
+Demo site https://nabetse00.github.io/test-argent-wagmi-connector/
