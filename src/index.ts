@@ -47,7 +47,8 @@ export default class ArgentWagmiConnector extends Connector<Web3Provider, IArgen
     provider.removeListener('accountsChanged', this.onAccountsChanged)
     provider.removeListener('chainChanged', this.onChainChanged)
     provider.removeListener('disconnect', this.onDisconnect)
-    localStorage.removeItem('walletconnect');
+    //localStorage.removeItem('walletconnect');
+    localStorage.clear();
     this.#provider = undefined;
   }
   async getAccount(): Promise<`0x${string}`> {
@@ -65,7 +66,8 @@ export default class ArgentWagmiConnector extends Connector<Web3Provider, IArgen
   }
   async getSigner(_config?: { chainId?: number | undefined } | undefined): Promise<any> {
     const provider = await this.getProvider();
-    return provider.getSigner();
+    const account = await this.getAccount()
+    return provider.getSigner(account);
   }
 
   async isAuthorized(): Promise<boolean> {

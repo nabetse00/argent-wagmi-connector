@@ -1,5 +1,11 @@
 # Argent Wagmi Custom Connector
 
+## Intro
+
+Welcome to the Argent Wagmi Custom Connector npm package! 
+
+This package provides an easy way for developers to quickly and easily integrate their applications with the Wagmi platform.
+
 ## Usage
 ```ts
 /**
@@ -78,3 +84,5 @@ See an example using vite react-ts template: https://github.com/nabetse00/test-a
 Web3Modal needs Metamask so install this extension !
 
 Demo site https://nabetse00.github.io/test-argent-wagmi-connector/
+
+# 
